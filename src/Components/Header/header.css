@@ -1,0 +1,23 @@
+.navbar-styles {
+  background-color: #0c2c55;
+  margin-bottom: 20px;
+}
+
+.navbar-link-styles {
+  color: #ffffff !important;
+  :hover {
+    color: #d8df00 !important;
+  }
+}
+
+.navbar-brand-styles {
+  color: #ffffff !important;
+  :hover {
+    color: #d8df00 !important;
+  }
+}
+
+.navbar-brand-text-styles {
+  font-family: "Alex Brush", cursive;
+  font-size: 26px !important;
+}
