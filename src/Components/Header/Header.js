@@ -24,7 +24,7 @@ function Header() {
     "Hello, I'd like to book car with Sunny Car!",
   );
   return (
-    <Navbar expand="lg" className="navbar-styles">
+    <Navbar expand="lg" variant="dark" className="navbar-styles">
       <Container>
         <Navbar.Brand className="navbar-brand-styles">
           <img src={car_logo} width="55px" style={{ marginRight: "10px" }} />
@@ -39,7 +39,7 @@ function Header() {
             <Nav.Link className="mx-3 navbar-link-styles">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link className="mx-1 my-2 navbar-link-styles">
+            <Nav.Link className="mx-1 navbar-link-styles">
               <HeaderBtn
                 onClick={() => (window.location.href = "tel:+917030499720")}
               >
@@ -50,7 +50,7 @@ function Header() {
                 Call Us
               </HeaderBtn>
             </Nav.Link>
-            <Nav.Link className="mx-1 my-2 navbar-link-styles">
+            <Nav.Link className="mx-1 navbar-link-styles">
               <HeaderBtn
                 onClick={() =>
                   (window.location.href = `https://wa.me/917030499720?text=${whatsAppText}`)
