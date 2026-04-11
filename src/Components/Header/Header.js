@@ -8,13 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-const HeaderBtn = styled.a`
+const HeaderBtn = styled.button`
   border-radius: 8px;
   background-color: transparent;
   border: 1px solid #d8df00;
   padding: 10px 15px;
   color: #ffffff;
-  text-decoration: none;
   &:hover {
     color: #d8df00;
   }
@@ -41,7 +40,9 @@ function Header() {
           </Nav>
           <Nav>
             <Nav.Link className="mx-1 my-2 navbar-link-styles">
-              <HeaderBtn href={`tel:+917030499720`}>
+              <HeaderBtn
+                onClick={() => (window.location.href = "tel:+917030499720")}
+              >
                 <FontAwesomeIcon
                   icon={faPhone}
                   style={{ marginRight: "5px", fontSize: "20px" }}
@@ -51,7 +52,9 @@ function Header() {
             </Nav.Link>
             <Nav.Link className="mx-1 my-2 navbar-link-styles">
               <HeaderBtn
-                href={`https://wa.me/917030499720?text=${whatsAppText}`}
+                onClick={() =>
+                  (window.location.href = `https://wa.me/917030499720?text=${whatsAppText}`)
+                }
               >
                 <FontAwesomeIcon
                   icon={faWhatsapp}
