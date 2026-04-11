@@ -40,7 +40,7 @@ function Header() {
             <Nav.Link className="mx-3 navbar-link-styles">Contact</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link className="mx-1 navbar-link-styles">
+            <Nav.Link className="mx-1 my-2 navbar-link-styles">
               <HeaderBtn href={`tel:+917030499720`}>
                 <FontAwesomeIcon
                   icon={faPhone}
@@ -49,7 +49,7 @@ function Header() {
                 Call Us
               </HeaderBtn>
             </Nav.Link>
-            <Nav.Link className="mx-1 navbar-link-styles">
+            <Nav.Link className="mx-1 my-2 navbar-link-styles">
               <HeaderBtn
                 href={`https://wa.me/917030499720?text=${whatsAppText}`}
               >
