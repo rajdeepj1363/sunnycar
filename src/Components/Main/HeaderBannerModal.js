@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { getNextDay } from "../../utility/helper";
 
 const Row = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const FieldWrapper = styled.div`
 
 const ModalWrapper = styled.div`
   border-radius: 8px;
-  background-color: rgba(238, 238, 238, 0.9);
+  background-color: rgba(238, 238, 238, 0.85);
   width: 100%;
   max-width: 500px; /* prevents full stretch on large screens */
   margin: 0 auto; /* center horizontally */
@@ -30,12 +31,15 @@ const ModalWrapper = styled.div`
 
 const InputBar = styled.input`
   width: 100%;
+  box-sizing: border-box; /* 🔥 critical fix */
   padding: 5px 20px;
   margin-bottom: 10px;
   background-color: #ffffff;
   border: 1px solid #000000;
   border-radius: 5px;
   width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
 
   @media (max-width: 600px) {
     padding: 6px 10px;
@@ -45,10 +49,14 @@ const InputBar = styled.input`
 
 const DatePicker = styled.input`
   width: 100%;
+  min-width: 0; /* 🔥 allows shrinking */
+  box-sizing: border-box; /* 🔥 critical fix */
   padding: 12px 20px 5px 20px;
   background-color: #ffffff;
   border: 1px solid #000000;
   border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
 
   @media (max-width: 600px) {
     padding: 8px 10px;
@@ -58,10 +66,13 @@ const DatePicker = styled.input`
 
 const DropdownSelection = styled.select`
   width: 100%;
+  box-sizing: border-box; /* 🔥 critical fix */
   padding: 12px 20px 5px 20px;
   background-color: #ffffff;
   border: 1px solid #000000;
   border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
 
   @media (max-width: 600px) {
     padding: 8px 10px;
@@ -98,19 +109,24 @@ const SendButton = styled.button`
   }
 `;
 function HeaderBannerModal() {
+  const today = new Date().toISOString().split("T")[0];
   const [location, setLocation] = useState("");
-  const [startDate, setStartDate] = useState(
-    new Date().toLocaleDateString("en-CA"),
-  );
-  const [endDate, setEndDate] = useState("");
+  const [startDate, setStartDate] = useState(today);
+  const [endDate, setEndDate] = useState(getNextDay(today));
   const [vehicle, setVehicle] = useState(" -- Vehicle --");
   const [vehicleType, setVehicleType] = useState("-- Vehicle Type --");
+
+  React.useEffect(() => {
+    setEndDate(getNextDay(startDate));
+  }, [startDate]);
 
   const handleCheckAvailability = () => {
     if (location && location?.length > 0 && endDate?.length > 0) {
       const stDate = new Date(startDate);
       const edDate = new Date(endDate);
-      if (stDate > edDate) window.alert("End date cannot be before start date");
+      if (stDate < today) window.alert("Start date cannot be in past");
+      else if (stDate > edDate)
+        window.alert("End date cannot be before start date");
       else {
         const enquiryText = encodeURIComponent(
           `Hello, I'd like to book car with Sunny Car! Below is my requirement,\n
@@ -146,6 +162,7 @@ function HeaderBannerModal() {
           <DatePicker
             type="date"
             placeholder="Trip start date"
+            min={today}
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
           />
@@ -155,6 +172,7 @@ function HeaderBannerModal() {
           <DatePicker
             type="date"
             placeholder="Trip end date"
+            min={startDate}
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
           />
