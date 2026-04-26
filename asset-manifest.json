@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sunnycar/static/css/main.bcb2236c.css",
-    "main.js": "/sunnycar/static/js/main.6e0fe25b.js",
+    "main.js": "/sunnycar/static/js/main.eb1d3fa0.js",
     "static/media/header_banner.png": "/sunnycar/static/media/header_banner.de11a3faeeb33b807b54.png",
     "static/media/car_logo_gold.png": "/sunnycar/static/media/car_logo_gold.425a139a9295a86f3817.png",
     "index.html": "/sunnycar/index.html",
     "main.bcb2236c.css.map": "/sunnycar/static/css/main.bcb2236c.css.map",
-    "main.6e0fe25b.js.map": "/sunnycar/static/js/main.6e0fe25b.js.map"
+    "main.eb1d3fa0.js.map": "/sunnycar/static/js/main.eb1d3fa0.js.map"
   },
   "entrypoints": [
     "static/css/main.bcb2236c.css",
-    "static/js/main.6e0fe25b.js"
+    "static/js/main.eb1d3fa0.js"
   ]
 }
