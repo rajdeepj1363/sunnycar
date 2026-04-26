@@ -122,9 +122,10 @@ function HeaderBannerModal() {
 
   const handleCheckAvailability = () => {
     if (location && location?.length > 0 && endDate?.length > 0) {
-      const stDate = new Date(startDate);
-      const edDate = new Date(endDate);
-      if (stDate < today) window.alert("Start date cannot be in past");
+      const td = new Date().setHours(0, 0, 0, 0);
+      const stDate = new Date(startDate).setHours(0, 0, 0, 0);
+      const edDate = new Date(endDate).setHours(0, 0, 0, 0);
+      if (stDate < td) window.alert("Start date cannot be in past");
       else if (stDate > edDate)
         window.alert("End date cannot be before start date");
       else {
