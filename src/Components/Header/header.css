@@ -20,3 +20,13 @@
   font-family: "Alex Brush", cursive;
   font-size: 26px !important;
 }
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #0c2c55;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
