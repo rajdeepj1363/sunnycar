@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/sunnycar/static/css/main.a73fab2c.css",
-    "main.js": "/sunnycar/static/js/main.6113514e.js",
+    "main.css": "/sunnycar/static/css/main.2b20d4f2.css",
+    "main.js": "/sunnycar/static/js/main.672fe280.js",
     "static/media/ertiga.png": "/sunnycar/static/media/ertiga.db10ddc7c580e19a6a4d.png",
     "static/media/swift.png": "/sunnycar/static/media/swift.a2bd159b28474202ca99.png",
     "static/media/innova.png": "/sunnycar/static/media/innova.5f508a0c92d4366926f2.png",
     "static/media/header_banner.png": "/sunnycar/static/media/header_banner.de11a3faeeb33b807b54.png",
     "static/media/car_logo_gold.png": "/sunnycar/static/media/car_logo_gold.425a139a9295a86f3817.png",
     "index.html": "/sunnycar/index.html",
-    "main.a73fab2c.css.map": "/sunnycar/static/css/main.a73fab2c.css.map",
-    "main.6113514e.js.map": "/sunnycar/static/js/main.6113514e.js.map"
+    "main.2b20d4f2.css.map": "/sunnycar/static/css/main.2b20d4f2.css.map",
+    "main.672fe280.js.map": "/sunnycar/static/js/main.672fe280.js.map"
   },
   "entrypoints": [
-    "static/css/main.a73fab2c.css",
-    "static/js/main.6113514e.js"
+    "static/css/main.2b20d4f2.css",
+    "static/js/main.672fe280.js"
   ]
 }
