@@ -8,7 +8,7 @@ import { Card, Col, Row } from "react-bootstrap";
 import ERTIGA from "../../images/feature_cars/ertiga.png";
 import INNOVA from "../../images/feature_cars/innova.png";
 import SWIFT from "../../images/feature_cars/swift.png";
-import "./featureCar.css";
+import "./styles.css";
 import styled from "styled-components";
 
 const WrapperDiv = styled.div`
