@@ -30,7 +30,15 @@ const CarCard = styled(Card)`
 `;
 function FeatureCars() {
   return (
-    <div style={{ overflow: "hidden", display: "block", margin: "0 auto" }}>
+    <div
+      style={{
+        overflow: "hidden",
+        display: "block",
+        margin: "0 auto",
+        backgroundColor: "#eeeeee",
+        paddingBottom: "3rem",
+      }}
+    >
       <h3 className="header-style">Featured Cars</h3>
       <WrapperDiv>
         <Row>
