@@ -210,9 +210,7 @@ function HeaderBannerModal() {
           </DropdownSelection>
         </FieldWrapper>
       </Row>
-      <SendButton onClick={handleCheckAvailability}>
-        Check availability
-      </SendButton>
+      <SendButton onClick={handleCheckAvailability}>Book with Us</SendButton>
     </ModalWrapper>
   );
 }

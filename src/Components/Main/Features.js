@@ -13,6 +13,7 @@ import {
 const WrapperDiv = styled.div`
   padding: 0 20rem;
   padding-top: 2rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 600px) {
     padding: 1.5rem 0;
