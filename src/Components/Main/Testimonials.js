@@ -15,17 +15,21 @@ const ReviewTxt = styled.p`
   }
 `;
 
+const WrapperCard = styled(Card)`
+  padding: 0 3rem;
+  background-color: #3b7597;
+  border-radius: 0;
+
+  @media (max-width: 600px) {
+    padding: 0 10px;
+  }
+`;
+
 function Testimonials() {
   return (
     <>
       <h3 className="header-style">Customer Testimonials</h3>
-      <Card
-        style={{
-          padding: "0 5rem",
-          backgroundColor: "#3B7597",
-          borderRadius: 0,
-        }}
-      >
+      <WrapperCard>
         <Card.Body>
           <Carousel controls={true} indicators={true} interval={2500}>
             {testimonials.map((testimonial, index) => (
@@ -52,7 +56,7 @@ function Testimonials() {
             ))}
           </Carousel>
         </Card.Body>
-      </Card>
+      </WrapperCard>
     </>
   );
 }
